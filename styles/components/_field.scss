@@ -1,0 +1,67 @@
+.field,
+.list-box {
+  @apply rounded-lg bg-primary-500 px-6 py-2;
+
+  &-text-white {
+    @apply text-white placeholder-white;
+  }
+
+  &.list-box {
+    @apply flex w-full cursor-pointer justify-between rounded-full text-start focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300;
+
+    > span {
+      @apply block truncate;
+    }
+  }
+
+  &-box {
+    @apply flex flex-col space-y-6;
+
+    > label {
+      @apply text-body-20;
+    }
+  }
+}
+
+.list-box-option {
+  @apply absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm;
+}
+
+.list-box-search {
+  @apply grid-col-space-3 grid md:grid-cols-1 md:space-y-2;
+
+  &-label {
+    @apply col-span-1 flex items-center justify-between text-body-24;
+
+    > span {
+      @apply px-4 md:hidden;
+    }
+  }
+}
+
+// override react-datepicker
+.container-box-search,
+.react-datepicker-wrapper {
+  @apply relative col-span-2 w-full;
+
+  > .icon-sort-left {
+    @apply pointer-events-none absolute right-0 mx-6;
+  }
+}
+
+.box-date-picker {
+  @apply flex items-center justify-between;
+}
+
+.date-picker {
+  @apply col-span-2 placeholder-black;
+}
+
+.box-date-picker,
+.date-picker {
+  @apply rounded-full bg-primary-500;
+}
+
+.react-datepicker__view-calendar-icon input {
+  @apply w-full;
+}

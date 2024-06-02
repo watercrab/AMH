@@ -1,0 +1,39 @@
+.tanstackTable {
+  @apply mx-auto w-full overflow-x-auto rounded-lg border lg:max-w-5xl;
+
+  > table {
+    @apply w-full;
+
+    > thead {
+      @apply border-b bg-primary-500 text-center text-bodyNormal-24 sm:text-bodyNormal-16;
+    }
+
+    > tbody {
+      @apply divide-y border-b text-center;
+    }
+
+    > tfoot {
+      > div {
+        @apply px-3.5 py-2;
+      }
+    }
+
+    td {
+      @apply px-3.5 py-2;
+    }
+  }
+
+  .pagination {
+    @apply grid w-full grid-cols-3 items-center px-6 py-2  lg:grid-cols-1 lg:space-y-3 sm:px-2;
+  }
+
+  .notHaveData {
+    @apply flex items-center justify-center border-b py-2;
+  }
+
+  tbody,
+  .pagination,
+  .notHaveData {
+    @apply text-bodyThin-20 sm:text-bodyThin-14;
+  }
+}

@@ -1,0 +1,11 @@
+.card {
+  @apply rounded-2xl shadow-01;
+
+  &-header {
+    @apply text-center;
+
+    .title {
+      @apply text-header-2 sm:text-header-3;
+    }
+  }
+}
